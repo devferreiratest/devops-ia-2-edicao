@@ -8,10 +8,11 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - run: echo "Obter o código"
-        - run: echo "Executar o Docker build
+        - run: echo "Executar o Docker build"
         - run: echo "Enviar a Imagem Docker para o Docker Hub"
     CD:
       runs-on: ubuntu-latest
+      needs: [CI]
       steps:
         - run: echo "Obter o códgio"
         - run: echo "Configurar o Kubeconfig"
