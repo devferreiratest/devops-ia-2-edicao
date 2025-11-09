@@ -7,7 +7,9 @@ jobs:
     CI:
       runs-on: ubuntu-latest
       steps:
-        - run: echo "Obter o código"
+        - name: Checkout
+          uses: actions/checkout@v5
+
         - run: echo "Executar o Docker build"
         - run: echo "Enviar a Imagem Docker para o Docker Hub"
     CD:
